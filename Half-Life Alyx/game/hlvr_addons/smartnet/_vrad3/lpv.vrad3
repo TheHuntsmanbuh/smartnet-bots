@@ -1,0 +1,30 @@
+// maps/smart_net_playground.vmap
+
+lpv_compute:
+    sceneinfo scene_info.dat
+    run $init
+    lpv_direct $directfile $startx $starty $startz $endx $endy $endz
+    lpv_indirect $indirectfile $startx $starty $startz $endx $endy $endz $minspp $maxspp $errortol
+    done
+
+lpv_init_244778352:
+    lpv_cells 16 16 12
+    lpv_box -384.000000 -384.000000 -128.000000 384.000000 384.000000 448.000000
+    lpv_local_to_world 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -0.000000 0.000000 1.000000 128.000000
+    lpv_init
+    lpv_load_solid_voxels voxels_244778352.dat
+    done
+
+lpv_finish_all:
+    sceneinfo scene_info.dat
+    run lpv_init_244778352
+    lpv_image
+    lpv_direct_load lpv_244778352_direct_0_0_0.dat 0 0 0 16 16 12
+    lpv_indirect_load lpv_244778352_indirect_0_0_0.dat 0 0 0 16 16 12
+    lpv_image_ambient_occlusion
+    lpv_image_median_filter 3
+    lpv_image_resolve
+    lpv_image_write_ambientcube           lpv_244778352_ambientcube.exr
+    lpv_image_write_direct_light_indices  lpv_244778352_dli.tga  lpv_244778352_dls.tga
+    done
+

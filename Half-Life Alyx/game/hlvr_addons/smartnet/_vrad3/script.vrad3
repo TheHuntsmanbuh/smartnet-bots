@@ -1,0 +1,41 @@
+// maps/smart_net_playground.vmap
+
+lm_compute:
+    sceneinfo       scene_info.dat
+    lightmap_load_packing_geometry lightmap_packing_geometry.dat
+    lightmap_size   512 512 256
+    lightmap_load_block lightmap_info.dat $blocknum 0
+    lightmap_generate_samples_from_packing_geometry 5
+    lightmap_pathtrace 256 1024 0.025
+    lightmap_directlight 4 512 0
+    lightmap_finish_block
+    lightmap_write_block $blockfile
+    done
+
+lm_combine:
+    lightmap_size   512 512 256
+    lightmap_load_packing_geometry lightmap_packing_geometry.dat
+    lightmap_image
+    lightmap_read_block lm_block_00000000.dat 0
+    lightmap_read_block lm_block_00000001.dat 1
+    lightmap_read_block lm_block_00000002.dat 2
+    lightmap_read_block lm_block_00000003.dat 3
+    lightmap_image_dilate_over_invalid
+    lightmap_image_write_normal         normal.exr
+    lightmap_image_write_tangent        tangent.exr
+    lightmap_image_write_sh_irradiance      sh_irradiance_noisy.exr 
+    lightmap_image_write_mean         lightmap_noisy.exr
+    lightmap_image_write_ao           ao_noisy.exr
+    lightmap_image_remove_fireflies
+    lightmap_image_filter_oidn
+    lightmap_image_filter_sh_oidn
+    lightmap_image_write_direct_light_indices direct_light_indices.exr 4
+    lightmap_image_write_direct_light_scalars direct_light_scalars.exr 4
+    lightmap_image_write_mean         lightmap.exr
+    lightmap_image_write_ao         ao.exr
+    lightmap_image_write_directional_radiance      shradiance_r.exr shradiance_g.exr shradiance_b.exr 
+    lightmap_image_write_sh_irradiance      sh_irradiance.exr 
+    lightmap_image_write_luxel_result_info  lightmap_luxel_result_info.dat
+    lightmap_image_write_chart_color   lightmap_chart_color.exr 256 1024
+    done
+
