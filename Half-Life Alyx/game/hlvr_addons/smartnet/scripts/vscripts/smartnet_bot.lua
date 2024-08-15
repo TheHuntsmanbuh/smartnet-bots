@@ -26,6 +26,7 @@ end
 local rds = 256
 local flNavGoalTolerance = 32
 local bShouldRun = true
+local bShouldrunning = true
 -- the closest this npc can get to the goal
 local flMinGoalDist = 64
 -- the farthest this npc can get to the goal
@@ -34,7 +35,7 @@ local flMaxGoalDist = 250
 -- put all the main npc stuff in here 
 -------------------------------------
 function citizenroam()
-	local goaltable = Entities:FindAllByNameWithin("smnav", thisEntity:GetForwardVector(), 512 )
+	local goaltable = Entities:FindAllByNameWithin("snnav", thisEntity:GetForwardVector(), 512 )
 	print (goaltable)
 	local whereto = goaltable[math.random(#goaltable)]
 	setrandomlooktarget(rds)
