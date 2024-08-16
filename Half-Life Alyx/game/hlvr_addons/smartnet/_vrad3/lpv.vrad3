@@ -15,6 +15,14 @@ lpv_init_244778352:
     lpv_load_solid_voxels voxels_244778352.dat
     done
 
+lpv_init_244778353:
+    lpv_cells 4 16 8
+    lpv_box -96.000000 -320.000000 -64.000000 96.000000 304.000000 208.000000
+    lpv_local_to_world 1.000000 0.000000 0.000000 96.000000 0.000000 1.000000 0.000000 720.000000 -0.000000 0.000000 1.000000 128.000000
+    lpv_init
+    lpv_load_solid_voxels voxels_244778353.dat
+    done
+
 lpv_finish_all:
     sceneinfo scene_info.dat
     run lpv_init_244778352
@@ -26,5 +34,14 @@ lpv_finish_all:
     lpv_image_resolve
     lpv_image_write_ambientcube           lpv_244778352_ambientcube.exr
     lpv_image_write_direct_light_indices  lpv_244778352_dli.tga  lpv_244778352_dls.tga
+    run lpv_init_244778353
+    lpv_image
+    lpv_direct_load lpv_244778353_direct_0_0_0.dat 0 0 0 4 16 8
+    lpv_indirect_load lpv_244778353_indirect_0_0_0.dat 0 0 0 4 16 8
+    lpv_image_ambient_occlusion
+    lpv_image_median_filter 3
+    lpv_image_resolve
+    lpv_image_write_ambientcube           lpv_244778353_ambientcube.exr
+    lpv_image_write_direct_light_indices  lpv_244778353_dli.tga  lpv_244778353_dls.tga
     done
 

@@ -2,13 +2,20 @@
 --main citizen ai (walking, tasks, interaction ect...)
 ------------------------------------------------------------------------------
 function Activate()
-	thisEntity:SetMaxHealth(400)
-	thisEntity:SetHealth(100)
+	
+	
 end
+local interactchance = 10000
+
+
 function Spawn() 
-	-- Registers a function to get called each time the entity updates, or "thinks"
+	thisEntity:SetMaxHealth(100)
+	thisEntity:SetHealth(100)
 
 	thisEntity:SetContextThink(nil, citizenroam, 0)
+	
+
+	-- Registers a function to get called each time the entity updates, or "thinks"
 end
 --=============================
 -- Activate is called by the engine after Spawn() and, if Spawn() occurred 
@@ -16,51 +23,80 @@ end
 -- Any setup code that requires interacting with other entities should go here
 --=============================
 function Activate()
+	
 	-- Register a function to receive callbacks from the AnimGraph of this entity
 	-- when Status Tags are emitted by the graph.  This must be called in Activate
 	-- because the AnimGraph has not been loaded yet when Spawn is called
 	thisEntity:RegisterAnimTagListener( AnimTagListener )
 end
-
-
+local count = 0
 local rds = 256
 local flNavGoalTolerance = 32
-local bShouldRun = true
-local bShouldberunning = true
+local bShouldRun = false
 -- the closest this npc can get to the goal
 local flMinGoalDist = 64
 -- the farthest this npc can get to the goal
 local flMaxGoalDist = 250
--------------------------------------
--- put all the main npc stuff in here 
--------------------------------------
-function citizenroam()
-	local goaltable = Entities:FindAllByNameWithin("snnav", thisEntity:GetForwardVector(), 512 )
-	print (goaltable)
+
+function interactthink()
+	local goaltable = Entities:FindAllByNameWithin("snnavinteract", thisEntity:GetForwardVector(), 1000 )
 	local whereto = goaltable[math.random(#goaltable)]
-	setrandomlooktarget(rds)
+	if whereto ~= nil then
+		movetogoal(whereto)
+		local targetgroup = Entities:FindByNameNearest("interactable", thisEntity:GetForwardVector(), 256 )
+		thisEntity:SetGraphLookTarget(targetgroup:GetAbsOrigin())
+    	targetgroup:SetParent(self)
+	else
+		thisEntity:SetContextThink(nil, citizenroam, 0)
+	end
+
+end
+
+function panic()
+	startrunning()
+	local goaltable = Entities:FindAllByNameWithin("snnav", thisEntity:GetForwardVector(), 512 )
+	local whereto = goaltable[math.random(#goaltable)]
 
 	if whereto ~= nil then
 		if thisEntity:NpcNavGoalActive() then
-			return 4
+			return 1
 		else
 			movetogoal(whereto)
 			
 		end
-		
-		
-			
-		
-
-		
-
-
-		
-
        setrandomlooktarget(rds)
 	end
-	return math.random(2,30)
+	healthcheck()
+	
+	thisEntity:SetHealth(thisEntity:GetHealth() + 1)
+	return 1
 end
+
+
+
+function citizenroam()
+	stoprunning()
+	local goaltable = Entities:FindAllByNameWithin("snnav", thisEntity:GetForwardVector(), 512 )
+	print (goaltable)
+	local whereto = goaltable[math.random(#goaltable)]
+	if whereto ~= nil then
+		if thisEntity:NpcNavGoalActive() then
+			return math.random(2,4)
+		else
+			movetogoal(whereto)
+			
+		end
+       setrandomlooktarget(rds)
+	end
+	personalitycheck()
+	return math.random(5,18)
+
+	
+	
+end
+-------------------------------------
+-- EVERYTHING UNDER THIS LINE IS FUNCTIONS, NOT THINK FUNCTIONS JUST ONES TO BE CALLED BY THE THINK FUNCTIONS
+-------------------------------------
 ---------------------------------------------------------------------------------------------------
 -- this is the code that defines the goal to the controlled entity and than forces it to move to it
 ---------------------------------------------------------------------------------------------------
@@ -94,4 +130,61 @@ function setrandomlooktarget( rds )
 	local trgt = trgttb[math.random(#trgttb)] 
 	
 	thisEntity:SetGraphLookTarget(trgt:GetAbsOrigin())
+end
+
+function startrunning()
+	test = thisEntity:GetGraphParameter('running')
+	
+	thisEntity:SetGraphParameterBool('running', true)
+end
+function stoprunning()
+	test = thisEntity:GetGraphParameter('running')
+	
+	thisEntity:SetGraphParameterBool('running', false)
+end
+
+function healthcheck()
+	local maxhealth = thisEntity:GetMaxHealth()
+	local health = thisEntity:GetHealth()
+
+	if health >= maxhealth then
+		thisEntity:SetContextThink(nil, citizenroam, 0)
+	else
+		thisEntity:SetContextThink(nil, panic, 0)
+	end
+end
+
+function personalitycheck()
+	local dice = math.random(1,450)
+	if dice >= interactchance then
+		thisEntity:SetContextThink(nil, interactthink, 0)
+	else 
+
+	end
+end
+
+function grabobject()
+
+	local targetgroup = Entities:FindByNameNearest("interactable", thisEntity:GetForwardVector(), 256 )
+    
+    if targetgroup == nil then
+    	thisEntity:SetContextThink(nil, citizenroam, 0)
+    else
+    	print("grabbed")
+    	thisEntity:SetGraphLookTarget(targetgroup:GetAbsOrigin())
+    	targetgroup:SetParent(self)
+    	
+    	thisEntity:SetContextThink(nil, citizenroam, 0)
+    end
+end
+function wait( time )
+    print(count)
+	if count < 1 then 
+		count = count + 0.5
+		return time / 2
+	end
+	
+
+	count = 0
+
 end

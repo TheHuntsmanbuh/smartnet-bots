@@ -952,26 +952,6 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "turn_left_45"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						source_filename = "models/citizenremake/raw/anims/turn_left_45.dmx"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "turn_left_90"
 						activity_name = ""
 						activity_weight = 1
@@ -985,26 +965,6 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						source_filename = "models/citizenremake/raw/anims/turn_left_90.dmx"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "turn_left_180"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						source_filename = "models/citizenremake/raw/anims/turn_left_180.dmx"
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
@@ -1563,6 +1523,11 @@
 								frames_from_start = 10
 								frames_from_end = 10
 							},
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 0
+								frames_from_end = 0
+							},
 						]
 						activity_name = ""
 						activity_weight = 1
@@ -1584,6 +1549,14 @@
 					{
 						_class = "AnimFile"
 						name = "idle_busy"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 0
+								frames_from_end = 0
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -1632,6 +1605,14 @@
 					{
 						_class = "AnimFile"
 						name = "idle_tight"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 0
+								frames_from_end = 0
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -1644,6 +1625,26 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						source_filename = "models/citizenremake/raw/anims/idle_tight.dmx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "turn_left_45"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/citizenremake/raw/anims/turn_left_45.dmx"
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
