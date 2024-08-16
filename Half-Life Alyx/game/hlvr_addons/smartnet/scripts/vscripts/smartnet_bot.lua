@@ -26,7 +26,7 @@ end
 local rds = 256
 local flNavGoalTolerance = 32
 local bShouldRun = true
-local bShouldrunning = true
+local bShouldberunning = true
 -- the closest this npc can get to the goal
 local flMinGoalDist = 64
 -- the farthest this npc can get to the goal
