@@ -76,7 +76,7 @@ end
 
 function citizenroam()
 	stoprunning()
-	local goaltable = Entities:FindAllByNameWithin("snnav", thisEntity:GetForwardVector(), 512 )
+	local goaltable = Entities:FindAllByNameWithin("snnav", thisEntity:GetForwardVector(), math.random(128, 1024) )
 	print (goaltable)
 	local whereto = goaltable[math.random(#goaltable)]
 	if whereto ~= nil then
@@ -90,9 +90,6 @@ function citizenroam()
 	end
 	personalitycheck()
 	return math.random(5,18)
-
-	
-	
 end
 -------------------------------------
 -- EVERYTHING UNDER THIS LINE IS FUNCTIONS, NOT THINK FUNCTIONS JUST ONES TO BE CALLED BY THE THINK FUNCTIONS
