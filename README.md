@@ -1,5 +1,5 @@
 ![Sequence 01](https://github.com/user-attachments/assets/39f31f26-2821-4676-a1fe-0812c48071ba) <h1>  Smartnet-Bots</h1>
-<p> this modpack/addon is intended to be used in user projects that require npcs a bit more intelligent than the base source 2 ones. check the wiki for more detailed descriptions of everything</p>
+<p> smartnet bots are npcs simmilar to the lambda players addon for garrysmod but on source 2. check the wiki for more detailed descriptions of everything</p>
 
 
 
