@@ -1,0 +1,240 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/characters/metrocop/metrocop_choreo_metrocop.dmx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "pelvis"
+							radius = 5.7
+							point0 = [ -2.656966, -0.0, 3.086451 ]
+							point1 = [ -2.656966, -0.0, -3.033981 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "spine_0"
+							radius = 5.5
+							point0 = [ 3.695217, 0.804706, -0.0 ]
+							point1 = [ 4.533483, 0.781843, -0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "spine_2"
+							radius = 6.7
+							point0 = [ 1.188073, 1.235801, -0.0 ]
+							point1 = [ 5.769898, -0.341464, -0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "head"
+							radius = 4.8
+							point0 = [ -1.263111, 4.834504, 0.0 ]
+							point1 = [ 2.08218, -0.839046, -0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "clavicle_L"
+							radius = 3.4
+							point0 = [ 5.398726, -0.202098, 0.863107 ]
+							point1 = [ 7.960688, 0.884402, 1.4915 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "arm_upper_L"
+							radius = 2.7
+							point0 = [ 4.913811, 0.494452, -0.169961 ]
+							point1 = [ 11.08139, -0.0, 0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "arm_lower_L"
+							radius = 2.7
+							point0 = [ -0.0, -0.0, -0.0 ]
+							point1 = [ 10.459919, -0.0, -0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "leg_upper_L"
+							radius = 4.0
+							point0 = [ 5.08656, 0.54814, -0.001759 ]
+							point1 = [ 16.104959, 1.079883, 0.189023 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "leg_lower_L"
+							radius = 3.4
+							point0 = [ 2.159226, 1.123486, 0.246278 ]
+							point1 = [ 16.043926, -0.401184, -0.083441 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "clavicle_R"
+							radius = 3.4
+							point0 = [ -5.398726, -0.327649, -0.823677 ]
+							point1 = [ -7.960688, 0.653849, -1.605995 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "arm_upper_R"
+							radius = 2.7
+							point0 = [ -4.913811, 0.522173, 0.026531 ]
+							point1 = [ -11.08139, -0.0, -0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "arm_lower_R"
+							radius = 2.7
+							point0 = [ 0.0, -0.0, 0.0 ]
+							point1 = [ -10.459919, -0.0, 0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "leg_upper_R"
+							radius = 4.0
+							point0 = [ -5.08656, -0.513641, 0.191401 ]
+							point1 = [ -16.104959, -0.944124, 0.557232 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "leg_lower_R"
+							radius = 3.4
+							point0 = [ -2.159226, -1.143278, 0.125659 ]
+							point1 = [ -16.043926, 0.407773, -0.040395 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "hand_L"
+							radius = 2.8
+							point0 = [ 2.388687, 0.127411, 0.077792 ]
+							point1 = [ 6.05734, 0.180938, 0.824208 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "ankle_L"
+							radius = 2.9
+							point0 = [ 1.483428, -2.346836, 0.017908 ]
+							point1 = [ 7.359182, 0.914411, -0.043347 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "hand_R"
+							radius = 2.8
+							point0 = [ -2.362582, -0.029403, -0.381381 ]
+							point1 = [ -6.095234, -0.323208, -0.383513 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = "ankle_R"
+							radius = 2.9
+							point0 = [ -1.483613, 2.346729, 0.016579 ]
+							point1 = [ -7.358266, -0.913881, -0.127791 ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = "animgraphs/metrocop_choreo.vanmgrph"
+		base_model_name = ""
+	}
+}
