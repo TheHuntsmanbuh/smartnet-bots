@@ -10,4 +10,4 @@
 
 <p> <b>please link this github repo in the description of anything using scripts, assets, animations or models from this addon!!</b> other than that go wild and feel free to edit and do whatever you want with these scripts and npcs!</p>
 <p>this project is open source and will remain open source! you can feel free to clone this repository at any time or make your own branch</p>
-<p>  </p>
+<p> <b>i will say this project may include some valve assets as placeholders for testing pourposes. THESE WILL BE REPLACED! it just takes a long time to redo so many animations and models</b> </p>
