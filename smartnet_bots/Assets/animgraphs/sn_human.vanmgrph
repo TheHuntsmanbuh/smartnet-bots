@@ -178,6 +178,76 @@
 			{
 				key = 
 				{
+					m_id = 418068848
+				}
+				value = 
+				{
+					_class = "CBlendAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ 720.0, -432.0 ]
+					m_nNodeID = 
+					{
+						m_id = 418068848
+					}
+					m_sNote = ""
+					m_children = 
+					[
+						{
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 249299324
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_name = "idle"
+							m_blendValue = 0.0
+						},
+						{
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 2023884363
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_name = "mover"
+							m_blendValue = 80.0
+						},
+					]
+					m_blendValueSource = "MoveSpeed"
+					m_param = 
+					{
+						m_id = 4294967295
+					}
+					m_blendKeyType = "BlendKey_UserValue"
+					m_bLockBlendOnReset = false
+					m_bSyncCycles = true
+					m_bLoop = true
+					m_bLockWhenWaning = true
+					m_damping = 
+					{
+						_class = "CAnimInputDamping"
+						m_speedFunction = "Spring"
+						m_fSpeedScale = 15.0
+						m_fMinSpeed = 10.0
+						m_fMaxTension = 1000.0
+						m_fTension = 100.0
+						m_fDamping = 5.0
+					}
+				}
+			},
+			{
+				key = 
+				{
 					m_id = 553400833
 				}
 				value = 
@@ -372,7 +442,7 @@
 				{
 					_class = "CSelectorAnimNode"
 					m_sName = "crouch or not"
-					m_vecPosition = [ -32.0, -224.0 ]
+					m_vecPosition = [ -32.0, -240.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1343158914
@@ -446,7 +516,7 @@
 				{
 					_class = "CFollowPathAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -432.0, -384.0 ]
+					m_vecPosition = [ -432.0, -400.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1361795977
@@ -467,7 +537,7 @@
 					m_bBlockNonPathMovement = false
 					m_bStopFeetAtGoal = true
 					m_bScaleSpeed = false
-					m_flScale = 0.5
+					m_flScale = 0.815
 					m_flMinAngle = 0.0
 					m_flMaxAngle = 180.0
 					m_flSpeedScaleBlending = 0.2
@@ -545,7 +615,7 @@
 					{
 						m_nodeID = 
 						{
-							m_id = 2023884363
+							m_id = 418068848
 						}
 						m_outputID = 
 						{
