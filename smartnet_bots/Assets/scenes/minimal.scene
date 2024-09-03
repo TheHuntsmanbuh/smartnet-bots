@@ -123,14 +123,6 @@
       ]
     },
     {
-      "__guid": "80490ffe-a906-41f5-8b85-62c593cd8468",
-      "Flags": 0,
-      "Name": "player",
-      "Enabled": true,
-      "__Prefab": "prefabs/sn_player.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "798861fd-e060-49e6-b4fc-d5cf51d0f07b",
       "Flags": 0,
       "Name": "sn_human",
@@ -149,6 +141,18 @@
           "UseAnimGraph": true
         },
         {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "9325a641-bc88-4ac6-add2-a756d04dee19",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18,
+          "UseCollisionRules": false
+        },
+        {
           "__type": "Sandbox.NavMeshAgent",
           "__guid": "393a7c08-d0d9-4871-ba5b-004e1b3c9445",
           "Acceleration": 50,
@@ -160,40 +164,8 @@
           "UpdateRotation": true
         },
         {
-          "__type": "Human",
-          "__guid": "37f7df6c-6560-4872-8fce-40ab411b0b67",
-          "Agent": {
-            "_type": "component",
-            "component_id": "393a7c08-d0d9-4871-ba5b-004e1b3c9445",
-            "go": "798861fd-e060-49e6-b4fc-d5cf51d0f07b",
-            "component_type": "NavMeshAgent"
-          }
-        },
-        {
-          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-          "__guid": "19286be1-8952-44a2-9ee5-0c8b051f93bb",
-          "BodyWeight": 1,
-          "EyesWeight": 1,
-          "HeadWeight": 1,
-          "LookAtEnabled": true,
-          "Target": {
-            "_type": "component",
-            "component_id": "16bcae36-889f-4be0-8eae-15f3e143c282",
-            "go": "798861fd-e060-49e6-b4fc-d5cf51d0f07b",
-            "component_type": "SkinnedModelRenderer"
-          }
-        },
-        {
-          "__type": "Sandbox.CharacterController",
-          "__guid": "9325a641-bc88-4ac6-add2-a756d04dee19",
-          "Acceleration": 10,
-          "Bounciness": 0.3,
-          "GroundAngle": 45,
-          "Height": 64,
-          "IgnoreLayers": "",
-          "Radius": 16,
-          "StepHeight": 18,
-          "UseCollisionRules": false
+          "__type": "thought.Think",
+          "__guid": "cb7a2384-efc6-44b2-bb54-0a9a43571324"
         }
       ],
       "Children": [
@@ -870,6 +842,34 @@
                   "Enabled": true
                 }
               ]
+            }
+          ]
+        },
+        {
+          "__guid": "4a380a77-ce42-4979-8297-d0d503039556",
+          "Flags": 0,
+          "Name": "Camera",
+          "Position": "52.59894,-307.9775,60.99105",
+          "Rotation": "0,0,0.7071067,0.7071068",
+          "Tags": "maincamera",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "ff8fb784-279a-4883-8a56-3c4e43d2c2d9",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 60,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
             }
           ]
         }
