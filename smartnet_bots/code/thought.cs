@@ -1,14 +1,15 @@
 using Sandbox;
 using System.Linq;
 using System;
+using System.Threading.Tasks;
 
 namespace thought;
 //everything in "public static class Thoughts" is pureley for storing data and settings for every other bot component to reference \\
-public static class Thoughts : component
+public static class Thoughts
 {
 	//DEV CODE\\
-	[property] public static bool DevMode { get; set; }
-	[property] public static bool FollowPlayer { get; set; }
+	public static bool DevMode { get; set; }
+	public static bool FollowPlayer { get; set; }
 	//DEV CODE\\
 
 	//null codes for different types of variables\\
@@ -34,17 +35,39 @@ public static class Thoughts : component
 	public static bool InFreefall = false; // if the bot is falling this will be set to true so no other actions are performed midair
 	
 }
+
+
+
+
 public sealed class Think : Component
 {
 
 	[Property] public NavMeshAgent Agent { get; set; }
 
-
-
-	protected override void OnUpdate()
+	async Task WaitFor( float waitseconds )
 	{
-		Log.Info( $"friends {Thoughts.NearbyFriends}" );
-		Log.Info( $"enemys {Thoughts.NearbyEnimies}" );
+
+		await Task.DelayRealtimeSeconds( waitseconds );
+
+	}
+
+	protected override void OnStart()
+	{
+		
+		bool stop = false;
+		while (stop==false)
+		{
+			Log.Info( $"friends {Thoughts.NearbyFriends}" );
+			Log.Info( $"enemys {Thoughts.NearbyEnimies}" );
+			Vector3? randompoint = Scene.NavMesh.GetRandomPoint( GameObject.Transform.Position, 500f );
+
+			if ( randompoint.HasValue )
+			{
+				Agent.MoveTo( randompoint.Value );
+			}
+
+			WaitFor(10);
+		}
 
 
 	}
