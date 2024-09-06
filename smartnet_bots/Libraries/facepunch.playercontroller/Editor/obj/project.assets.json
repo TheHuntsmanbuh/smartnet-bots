@@ -66,28 +66,28 @@
   "libraries": {
     "actiongraph/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj",
-      "msbuildProject": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj"
+      "path": "../../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj",
+      "msbuildProject": "../../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj"
     },
     "Base Editor Library/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj",
-      "msbuildProject": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj"
+      "path": "../../../../../../../../../../build/_work/sbox/sbox/game/addons/tools/Code/Base Editor Library.csproj",
+      "msbuildProject": "../../../../../../../../../../build/_work/sbox/sbox/game/addons/tools/Code/Base Editor Library.csproj"
     },
     "Base Library/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj",
-      "msbuildProject": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj"
+      "path": "../../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj",
+      "msbuildProject": "../../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj"
     },
     "playercontroller/1.0.0": {
       "type": "project",
-      "path": "../Code/playercontroller.csproj",
-      "msbuildProject": "../Code/playercontroller.csproj"
+      "path": "../../../../../../../../../lachl/Documents/GitHub/smartnet-bots/smartnet_bots/Libraries/facepunch.playercontroller/Code/playercontroller.csproj",
+      "msbuildProject": "../../../../../../../../../lachl/Documents/GitHub/smartnet-bots/smartnet_bots/Libraries/facepunch.playercontroller/Code/playercontroller.csproj"
     },
     "shadergraph/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj",
-      "msbuildProject": "../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj"
+      "path": "../../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj",
+      "msbuildProject": "../../../../../../../../../../Program Files (x86)/steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -99,19 +99,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lachl\\.nuget\\packages\\": {}
+    "C:\\Users\\popop\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lachl\\Documents\\GitHub\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Editor\\playercontroller.editor.csproj",
+      "projectUniqueName": "C:\\Users\\popop\\OneDrive\\Documents\\GitHub repos\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Editor\\playercontroller.editor.csproj",
       "projectName": "playercontroller.editor",
-      "projectPath": "C:\\Users\\lachl\\Documents\\GitHub\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Editor\\playercontroller.editor.csproj",
-      "packagesPath": "C:\\Users\\lachl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lachl\\Documents\\GitHub\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Editor\\obj\\",
+      "projectPath": "C:\\Users\\popop\\OneDrive\\Documents\\GitHub repos\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Editor\\playercontroller.editor.csproj",
+      "packagesPath": "C:\\Users\\popop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\popop\\OneDrive\\Documents\\GitHub repos\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Editor\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lachl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\popop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -139,6 +144,11 @@
             }
           }
         }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -155,7 +165,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
