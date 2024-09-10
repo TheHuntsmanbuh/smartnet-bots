@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("playercontroller.editor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53035b71035a230b117b272606c7d66f6825bc8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5d61d2887b621b9acb0ee559a37f63817dc91e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("playercontroller.editor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("playercontroller.editor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
