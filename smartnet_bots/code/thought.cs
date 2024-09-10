@@ -41,33 +41,35 @@ public static class Thoughts
 
 public sealed class Think : Component
 {
-
+	
 	[Property] public NavMeshAgent Agent { get; set; }
-
-	async Task WaitFor( float waitseconds )
+	
+	async Task MainAiLoop()
 	{
-		bool stop = false;
-		while ( stop == false )
+		while ( Thoughts.InFreefall == false )
 		{
-			Log.Info( $"friends {Thoughts.NearbyFriends}" );
-			Log.Info( $"enemys {Thoughts.NearbyEnimies}" );
-			Vector3? randompoint = Scene.NavMesh.GetRandomPoint( GameObject.Transform.Position, 500f );
+			var mypos = Agent.Transform.Position;
+			var test = Scene.Directory.FindByName( "Cube" ).First();
+			var p = test.Transform.Position;
+			Agent.MoveTo( p );
+			await Task.DelaySeconds(1);
+			p = test.Transform.Position;
+			mypos = Agent.Transform.Position;
 
-			if ( randompoint.HasValue )
+			while ( p != mypos )
 			{
-				Agent.MoveTo( randompoint.Value );
-				await Task.DelayRealtimeSeconds( waitseconds );
-			}
-			await Task.DelayRealtimeSeconds( waitseconds );
-		}
 
+			}
+
+		}
+		await Task.DelaySeconds( 15 );
 	}
 
 	protected override void OnStart()
 	{
-		
 
-	WaitFor(10);
+
+		MainAiLoop();
 
 
 	}

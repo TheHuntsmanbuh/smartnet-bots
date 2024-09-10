@@ -133,9 +133,9 @@
         {
           "__type": "Sandbox.NavMeshAgent",
           "__guid": "393a7c08-d0d9-4871-ba5b-004e1b3c9445",
-          "Acceleration": 50,
+          "Acceleration": 220,
           "Height": 64,
-          "MaxSpeed": 120,
+          "MaxSpeed": 220,
           "Radius": 16,
           "Separation": 0.25,
           "UpdatePosition": true,
@@ -161,14 +161,6 @@
             "go": "798861fd-e060-49e6-b4fc-d5cf51d0f07b",
             "component_type": "NavMeshAgent"
           }
-        },
-        {
-          "__type": "sandbox.smartnet.CitizenAnimationHelper",
-          "__guid": "c2a0c4fa-ff76-4b8e-ae94-b3cdbd838ba4",
-          "BodyWeight": 1,
-          "EyesWeight": 1,
-          "HeadWeight": 1,
-          "LookAtEnabled": false
         }
       ],
       "Children": [
