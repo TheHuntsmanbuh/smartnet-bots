@@ -144,7 +144,7 @@
         {
           "__type": "Sandbox.SkinnedModelRenderer",
           "__guid": "16bcae36-889f-4be0-8eae-15f3e143c282",
-          "AnimationGraph": "animgraphs/sn_human.vanmgrph",
+          "AnimationGraph": "animgraphs/smartnet_human.vanmgrph",
           "BodyGroups": 18446744073709551615,
           "CreateBoneObjects": false,
           "Model": "models/sn_human.vmdl",
@@ -161,6 +161,14 @@
             "go": "798861fd-e060-49e6-b4fc-d5cf51d0f07b",
             "component_type": "NavMeshAgent"
           }
+        },
+        {
+          "__type": "sandbox.smartnet.CitizenAnimationHelper",
+          "__guid": "c2a0c4fa-ff76-4b8e-ae94-b3cdbd838ba4",
+          "BodyWeight": 1,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "LookAtEnabled": false
         }
       ],
       "Children": [

@@ -46,16 +46,8 @@ public sealed class Think : Component
 
 	async Task WaitFor( float waitseconds )
 	{
-
-		await Task.DelayRealtimeSeconds( waitseconds );
-
-	}
-
-	protected override void OnStart()
-	{
-		
 		bool stop = false;
-		while (stop==false)
+		while ( stop == false )
 		{
 			Log.Info( $"friends {Thoughts.NearbyFriends}" );
 			Log.Info( $"enemys {Thoughts.NearbyEnimies}" );
@@ -64,10 +56,18 @@ public sealed class Think : Component
 			if ( randompoint.HasValue )
 			{
 				Agent.MoveTo( randompoint.Value );
+				await Task.DelayRealtimeSeconds( waitseconds );
 			}
-
-			WaitFor(10);
+			await Task.DelayRealtimeSeconds( waitseconds );
 		}
+
+	}
+
+	protected override void OnStart()
+	{
+		
+
+	WaitFor(10);
 
 
 	}
