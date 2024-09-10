@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kkRI9MWqE+B7QPZEAKVNRSqgo1YU6z38UcpsJ9FGUyQ5XKyxk791i/X6Ofp632IFTIHezDF4xhqwQoGu47P/Jw==",
+  "dgSpecHash": "8wvy8vwMeRE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lachl\\Documents\\GitHub\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Code\\playercontroller.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\popop\\OneDrive\\Documents\\GitHub repos\\smartnet-bots\\smartnet_bots\\Libraries\\facepunch.playercontroller\\Code\\playercontroller.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\popop\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\popop\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\popop\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
